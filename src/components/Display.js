@@ -6,8 +6,13 @@
  import MaterialTable from 'material-table'
 import Paper from '@material-ui/core/Paper';
 import BasicTable from './BasicTable';
+// import Leader from './Leader'
 import firebase from 'firebase';
+import NameForm from './CategoryForm'
 import 'firebase/firestore';
+<<<<<<< Updated upstream
+=======
+import './Display.scss';
 
 class Display extends React.Component {
   constructor(props) {
@@ -188,15 +193,15 @@ class Display extends React.Component {
     console.log(this.state.columns);
     return (
       <div className="display-container">
-        
         <div style={{ maxWidth: '100%' }}>
         <MaterialTable
           columns={columns}
           data={data}
           title="Recycled Material"
         />
-      </div>
-    
+        </div>
+        <h2>Add New Category</h2>
+        <NameForm />
       </div>
     )
   }
