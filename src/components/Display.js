@@ -6,6 +6,7 @@
  import MaterialTable from 'material-table'
 import Paper from '@material-ui/core/Paper';
 import BasicTable from './BasicTable';
+import Leader from './Leader'
 import firebase from 'firebase';
 import 'firebase/firestore';
 import Modal from 'react-modal';
@@ -200,11 +201,17 @@ class Display extends React.Component {
     console.log(this.state.data);
     console.log(this.state.columns);
     return (
+<<<<<<< HEAD
+      <div className="display-container">
+=======
       <div className="container">
           
           <h1> Bear's Recycling Race Progress Tracker </h1>
         
+>>>>>>> 783d914adf08d3c5235dca12e25e7226cdc0537d
         <div style={{ maxWidth: '100%' }}>
+        <h2>Current Leader</h2>
+        <Leader data={this.state.dataFirebase} />
         <MaterialTable
         editable={{
           isEditable: () => true,
@@ -251,6 +258,8 @@ class Display extends React.Component {
           title="Recycled Material"
         />
       </div>
+<<<<<<< HEAD
+=======
       
       <div>
           <Modal
@@ -276,6 +285,7 @@ class Display extends React.Component {
           </Modal>
       </div>
 
+>>>>>>> 783d914adf08d3c5235dca12e25e7226cdc0537d
       { Object.entries(this.state.dataFirebase).length !== 0 && <Leaderboard data={this.state.dataFirebase} /> }
       </div>
     )
